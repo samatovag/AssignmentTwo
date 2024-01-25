@@ -13,7 +13,12 @@ public class Person implements Comparable<Person>, Payable {
     public Person() {
         this.id = nextId++;
     }
+    public Person(String name, String surname) {
+        this();
+        this.name = name;
+        this.surname = surname;
 
+    }
     // toString
     @Override
     public String toString() {
