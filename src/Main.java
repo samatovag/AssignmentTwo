@@ -27,7 +27,7 @@ public class Main {
     public static void printData(Iterable<Person> people) {
         for (Person person : people) {
             String formattedEarnings = String.format("%.2f", person.getPaymentAmount());
-            System.out.println(person.toString() + " earns " + formattedEarnings + " tenge ");
+            System.out.println(person.toString() + " earns " + formattedEarnings + " tenge");
         }
     }
 }

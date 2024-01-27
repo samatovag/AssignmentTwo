@@ -36,5 +36,20 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    //
+    // implementing the Payable interface method
+    @Override
+    public double getPaymentAmount() {
+        return salary;
+    }
+
+    // implementation of the Comparable interface method
+    @Override
+    public int compareTo(Person otherPerson) {
+        // the comparison of each salary
+        if (otherPerson instanceof Employee) {
+            return Double.compare(this.getSalary(), ((Employee) otherPerson).getSalary());
+        } else {
+            return 1;
+        }
+    }
 }
