@@ -19,9 +19,10 @@ public class Person implements Comparable<Person>, Payable {
         this.surname = surname;
 
     }
-    // toString
+    // toString method
     @Override
     public String toString() {
+        return id + ". " + name + " " + surname;
 
     }
 
@@ -32,14 +33,28 @@ public class Person implements Comparable<Person>, Payable {
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getSurname() {
+        return surname;
+    }
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
-
+    // getPosition method
+    public String getPosition() {
+        return "Student";
+    }
     // Implementation of Payable interface method
     @Override
     public double getPaymentAmount() {
+        // Default implementation for Person
         return 0.00;
     }
 
+    // Implementation of Comparable interface method
     @Override
     public int compareTo(Person other) {
         return Double.compare(this.getPaymentAmount(), other.getPaymentAmount());
